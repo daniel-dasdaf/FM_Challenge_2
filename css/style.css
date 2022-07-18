@@ -1,0 +1,173 @@
+/* === ROOT === */
+:root{
+    --clr-primary:hsl(25, 97%, 53%);
+    --clr-neutral:hsl(0, 0%, 100%);
+    --clr-background:hsl(216, 12%, 8%);
+    --clr-dark-blue:hsl(213, 19%, 18%);
+    --clr-card:hsl(215, 25%, 13%);
+    --clr-medium-grey:hsl(216, 12%, 54%);
+
+
+    --fnt-family: 'Overpass', sans-serif;
+}
+
+/* === CSS RESET === */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* === GERAL === */
+*{
+    box-sizing: border-box;
+}
+
+.selected{
+    color: var(--clr-neutral)!important;
+    background-color: var(--clr-medium-grey)!important;
+}
+.hidden{
+    display: none!important;
+}
+
+/* === HELLO WORLD === */
+
+/* body */
+body{
+    background-color: var(--clr-background);
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fnt-family);
+    color: var(--clr-neutral);
+}
+
+/*main*/
+.main{
+    background-color: var(--clr-card);
+    margin: 0 auto;
+    border-radius: 25px;
+    padding: 30px;
+    margin: 30px;
+    max-width: 400px;
+}
+
+.rating{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.rating__title{
+    font-weight: 700;
+    font-size: 22px;
+}
+.rating__info{
+    font-weight: 400;
+    color: var(--clr-medium-grey);
+    line-height: 1.6;
+    font-size: 15px;
+}
+.rating__star{
+    background-color: var(--clr-dark-blue);
+    width:50px;
+    padding: 15px;
+    border-radius: 50px;
+}
+.rating__list{
+    display: flex;
+    justify-content: space-between;
+}
+.rating__number{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: var(--clr-dark-blue);
+    padding: 20px;
+    border-radius: 30px;
+    color: var(--clr-medium-grey);
+    cursor: pointer;
+}
+.rating__number:hover{
+    color: var(--clr-neutral);
+    background-color: var(--clr-primary);
+}
+.rating__submit{
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: var(--clr-primary);
+    padding: 13px;
+    border-radius: 25px;
+    font-weight: 700;
+}
+.rating__submit:hover{
+    color: var(--clr-primary);
+    background-color: var(--clr-neutral);
+}
+
+/* Thanks Section */
+.thanks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+.thanks__selected{
+    color: var(--clr-primary);
+    padding:15px;
+    font-size: 14px;
+    background-color: var(--clr-dark-blue);
+    border-radius: 20px;
+    line-height:0;
+}
+.thanks__title{
+    font-size: 22px;
+    font-weight: 700;
+}
+.thanks__info{
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--clr-medium-grey);
+}
