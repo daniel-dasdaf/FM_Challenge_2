@@ -116,6 +116,7 @@ body{
 .rating__list{
     display: flex;
     justify-content: space-between;
+    gap: 2%;
 }
 .rating__number{
     width: 50px;
@@ -152,7 +153,9 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 30px;
+}
+.thanks > * {
+    margin-bottom: 40px;
 }
 .thanks__selected{
     color: var(--clr-primary);
@@ -165,9 +168,11 @@ body{
 .thanks__title{
     font-size: 22px;
     font-weight: 700;
+    margin-bottom: 10px;
 }
 .thanks__info{
     font-size: 15px;
     line-height: 1.5;
     color: var(--clr-medium-grey);
+    margin-bottom: 0;
 }
